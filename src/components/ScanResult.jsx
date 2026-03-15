@@ -30,15 +30,8 @@ const ScanResult = ({ result, loading, closeModal }) => {
             </div>
           ))}
         </>
-      ) : result ? (
-        <>
-          <p>
-            <strong>Breed:</strong> {result.breed}
-          </p>
-          <p>
-            <strong>Confidence:</strong> {(result.confidence * 100).toFixed(2)}%
-          </p>
-        </>
+      ) : result && result.error ? (
+        <p style={{ color: "red" }}>Error: {result.error}</p>
       ) : (
         <p>No result found</p>
       )}
