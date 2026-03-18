@@ -1,8 +1,12 @@
 .guide-container {
-  padding: 20px;
+  padding: 15px;
   background: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .guide-container h2 {
@@ -12,7 +16,7 @@
 }
 
 .guide-step {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .guide-step h4 {
@@ -24,20 +28,42 @@
 .sample-images {
   display: flex;
   gap: 10px;
+  margin-top: 8px;
 }
 
 .sample-images img {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   object-fit: cover;
   border-radius: 8px;
   border: 2px solid #ddd;
-  transition: transform 0.2s, border-color 0.2s;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+  flex-shrink: 0;
 }
 
 .sample-images img:hover {
   transform: scale(1.05);
   border-color: #1ebc73;
+}
+
+/* Breeds list styling */
+.breeds-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.breed-tag {
+  background: #1ebc73;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  display: inline-block;
 }
 
 /* Popup overlay */
@@ -47,7 +73,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;

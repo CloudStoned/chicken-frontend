@@ -75,7 +75,7 @@ const Home = () => {
         <div className="left-section">
           <ImageUploader onImageSelect={setUploadedImage} uploadedImage={uploadedImage} />
           <button className="scan-btn" disabled={!uploadedImage} onClick={() => handleScanClick(uploadedImage)}>
-            Scan Chicken
+            Scan Photo
           </button>
         </div>
 
