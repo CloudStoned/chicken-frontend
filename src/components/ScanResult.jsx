@@ -33,7 +33,7 @@ const ScanResult = ({ result, loading, closeModal }) => {
       ) : result && result.error ? (
         <p style={{ color: "red" }}>Error: {result.error}</p>
       ) : (
-        <p>No result found</p>
+        <p>No chicken detected in the image.</p>
       )}
     </div>
   );
